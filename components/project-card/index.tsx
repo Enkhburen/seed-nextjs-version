@@ -36,20 +36,20 @@ export default function SeedProjectCard(props: IProps) {
 
     return (
         <div>
-            <Card sx={{ height: '500px', mx: 2, position: 'relative' }}>
-                <Box sx={{
-                    position: 'absolute',
-                    left: '30px',
-                    top: '220px',
-                    zIndex: '1',
-                    backgroundColor: '#127f06',
-                    p: 2,
-                    color: 'white'
-                }}>
-                    {category ? category : 'Таг '}
-                </Box>
-                <CardMedia sx={{ overflow: 'hidden', height: '250px' }}>
-                    <Image src={image ? image : ProjectGrid1} alt={alt ? alt : "Project Card Image"} layout='responsive' />
+            <Card sx={{ height: '500px', mx: 2 }}>
+                <CardMedia sx={{ overflow: 'hidden', height: '250px', position: 'relative' }}>
+                    <Image src={image ? image : ProjectGrid1} alt={alt ? alt : "Project Card Image"} layout='responsive' height='250px'/>
+                    <Box sx={{
+                        position: 'absolute',
+                        left: '30px',
+                        bottom: '1px',
+                        zIndex: '1',
+                        backgroundColor: '#127f06',
+                        p: 2,
+                        color: 'white'
+                    }}>
+                        {category ? category : 'Таг '}
+                    </Box>
                 </CardMedia>
                 <CardContent sx={{ mt: 5, px: 5 }}>
                     <Link
