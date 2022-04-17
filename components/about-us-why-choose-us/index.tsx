@@ -1,12 +1,12 @@
 import { Container } from '@mui/material'
-import { Grid } from '@mui/material'
 import { Typography } from '@mui/material'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import { Button } from '@mui/material'
 
 import AddIcon from '@mui/icons-material/Add'
 import PeopleIcon from '@mui/icons-material/People'
+import HandshakeIcon from '@mui/icons-material/Handshake'
+import MoreTimeIcon from '@mui/icons-material/MoreTime'
 
 export default function WhyChooseUs() {
 	return (
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
 					}}
 				>
 					<CardContent>
-						<PeopleIcon sx={{ fontSize: '70px', color: '#127F06' }} />
+						<HandshakeIcon sx={{ fontSize: '70px', color: '#127F06' }} />
 						<Typography variant="h5" sx={{ my: 2, fontWeight: 'bold' }}>
 							Итгэлцэл
 						</Typography>
@@ -92,7 +92,7 @@ export default function WhyChooseUs() {
 					}}
 				>
 					<CardContent>
-						<PeopleIcon sx={{ fontSize: '70px', color: '#127F06' }} />
+						<MoreTimeIcon sx={{ fontSize: '70px', color: '#127F06' }} />
 						<Typography variant="h5" sx={{ my: 2, fontWeight: 'bold' }}>
 							Анхдагч & Хурд
 						</Typography>
