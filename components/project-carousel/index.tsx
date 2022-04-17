@@ -14,14 +14,44 @@ var sliderSettings = {
     arrows: false,
     dots: false,
     infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
 };
 
 export default function SeedProjectCarousel() {
+
+    // Backend data fetch
+
 	return (
-        <Box sx={{ backgroundColor: '#001d23', p: 5 }}>
+        <Box sx={{ backgroundColor: '#001d23', py: 15, px: 5 }}>
             <Slider
                 {...sliderSettings}
             >

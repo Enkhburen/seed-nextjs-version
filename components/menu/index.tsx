@@ -72,7 +72,7 @@ export default function SeedMenu() {
             <Button
               sx={{ dislay: 'block' }}
               color='primary'
-              variant="outlined"
+              variant="contained"
             >
               Төсөл дэмжих
             </Button>

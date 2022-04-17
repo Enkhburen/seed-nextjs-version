@@ -14,7 +14,7 @@ import AboutGallery2 from '../../assets/about/about-gallery-2.jpg'
 export default function SeedLandingAboutUs() {
     return (
         <Container>
-            <Grid container justifyContent='space-between' alignItems='center' sx={{ py: 15}}>
+            <Grid container justifyContent='space-between' alignItems='center' sx={{ py: 15 }}>
                 <Grid item xs={6}>
                     <Image src={AboutGallery2} alt="about-us" />
                 </Grid>

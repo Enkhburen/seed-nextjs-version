@@ -30,7 +30,6 @@ export default function SeedProjectCard(props: IProps) {
         author,
         authorLink,
         image,
-        alt,
         href
     } = props
 
