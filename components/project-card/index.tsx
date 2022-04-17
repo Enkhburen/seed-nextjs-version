@@ -48,8 +48,8 @@ export default function SeedProjectCard(props: IProps) {
                 }}>
                     {category ? category : 'Таг '}
                 </Box>
-                <CardMedia>
-                    <Image src={image ? image : ProjectGrid1} alt={alt ? alt : "Project Card Image"} />
+                <CardMedia sx={{ overflow: 'hidden', height: '250px' }}>
+                    <Image src={image ? image : ProjectGrid1} alt={alt ? alt : "Project Card Image"} layout='responsive' />
                 </CardMedia>
                 <CardContent sx={{ mt: 5, px: 5 }}>
                     <Link

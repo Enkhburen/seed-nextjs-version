@@ -1,20 +1,21 @@
 import React from 'react'
 import Image from 'next/image';
+
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
-import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
 import SeedLogoBlack from '../../assets/logo/seed_logo_black.svg';
-import { Grid } from '@mui/material';
 
 const pages = ['Нүүр', 'Төслүүд', 'Блог', 'Бидний тухай', 'Холбогдох']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']

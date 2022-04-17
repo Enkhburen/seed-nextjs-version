@@ -11,12 +11,12 @@ import ProjectGrid6 from '../../assets/project/project-grid-06.jpg';
 import SeedProjectCard from '../project-card'
 
 var sliderSettings = {
-    dots: true,
+    arrows: false,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: false
+    slidesToScroll: 1
 };
 
 export default function SeedProjectCarousel() {
