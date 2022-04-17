@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image';
+import Image from 'next/image'
 
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -9,79 +9,85 @@ import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
-import SeedLogoBlack from '../../assets/logo/seed_logo_black.svg';
+import SeedLogoBlack from '../../assets/logo/seed_logo_black.svg'
 
 const pages = ['Нүүр', 'Төслүүд', 'Блог', 'Бидний тухай', 'Холбогдох']
+const pagesUrls = ['/', 'projects', 'blogs', 'about-us', 'contact-us']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 export default function SeedMenu() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null)
-  const [anchorElUser, setAnchorElUser] = React.useState(null)
+	const [anchorElNav, setAnchorElNav] = React.useState(null)
+	const [anchorElUser, setAnchorElUser] = React.useState(null)
 
-  const handleOpenNavMenu = (event: any) => {
-    setAnchorElNav(event.currentTarget)
-  }
-  const handleOpenUserMenu = (event: any) => {
-    setAnchorElUser(event.currentTarget)
-  }
+	const handleOpenNavMenu = (event: any) => {
+		setAnchorElNav(event.currentTarget)
+	}
+	const handleOpenUserMenu = (event: any) => {
+		setAnchorElUser(event.currentTarget)
+	}
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
-  }
+	const handleCloseNavMenu = () => {
+		setAnchorElNav(null)
+	}
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null)
-  }
+	const handleCloseUserMenu = () => {
+		setAnchorElUser(null)
+	}
 
-  return (
-    <AppBar position="static" color='default' sx={{ display: { xs: 'none', md: 'block' } }}>
-      <Container>
-        <Grid container justifyContent='space-between' alignItems='center' spacing={3}>
-          <Grid item xs={3}>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-            >
-              <Image width='160' src={SeedLogoBlack} alt="Seed Logo Black" />
-            </Typography>
-          </Grid>
+	return (
+		<AppBar
+			position="static"
+			color="default"
+			sx={{ display: { xs: 'none', md: 'block' } }}
+		>
+			<Container>
+				<Grid
+					container
+					justifyContent="space-between"
+					alignItems="center"
+					spacing={3}
+				>
+					<Grid item xs={3}>
+						<Typography variant="h6" noWrap component="div">
+							<Image width="160" src={SeedLogoBlack} alt="Seed Logo Black" />
+						</Typography>
+					</Grid>
 
-          <Grid item>
-            <Box>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, display: 'inline-block' }}
-                  color='primary'
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
-          </Grid>
+					<Grid item>
+						<Box>
+							{pages.map((page) => (
+								<Button
+									key={page}
+									onClick={handleCloseNavMenu}
+									sx={{ my: 2, display: 'inline-block' }}
+									color="primary"
+								>
+									{page}
+								</Button>
+							))}
+						</Box>
+					</Grid>
 
-          <Grid item xs={3} sx={{ textAlign: 'right'}}>
-            <Button
-              sx={{ dislay: 'block' }}
-              color='primary'
-              variant="contained"
-            >
-              Төсөл дэмжих
-            </Button>
-          </Grid>
-        </Grid>
+					<Grid item xs={3} sx={{ textAlign: 'right' }}>
+						<Button
+							sx={{ dislay: 'block' }}
+							color="primary"
+							variant="contained"
+						>
+							Төсөл дэмжих
+						</Button>
+					</Grid>
+				</Grid>
 
-          {/* MOBILE -- START */}
+				{/* MOBILE -- START */}
 
-          {/* <Typography
+				{/* <Typography
             variant="h6"
             noWrap
             component="div"
@@ -127,9 +133,9 @@ export default function SeedMenu() {
             </Menu>
           </Box> */}
 
-          {/* MOBILE -- END */}
+				{/* MOBILE -- END */}
 
-          {/* <Box sx={{ flexGrow: 0 }}>
+				{/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -157,8 +163,8 @@ export default function SeedMenu() {
                 </MenuItem>
               ))}
             </Menu> */}
-          {/* </Box> */}
-      </Container>
-    </AppBar>
-  )
+				{/* </Box> */}
+			</Container>
+		</AppBar>
+	)
 }

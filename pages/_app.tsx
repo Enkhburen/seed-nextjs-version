@@ -12,18 +12,18 @@ import SeedFooter from '../components/footer'
 const clientSideEmotionCache = createEmotionCache()
 
 const MyApp = (props: any) => {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+	const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
-  return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightTheme}>
-        <CssBaseline />
-        <SeedMenu />
-        <Component {...pageProps} />
-        <SeedFooter/>
-      </ThemeProvider>
-    </CacheProvider>
-  )
+	return (
+		<CacheProvider value={emotionCache}>
+			<ThemeProvider theme={lightTheme}>
+				<CssBaseline />
+				<SeedMenu />
+				<Component {...pageProps} />
+				<SeedFooter />
+			</ThemeProvider>
+		</CacheProvider>
+	)
 }
 
 export default MyApp
