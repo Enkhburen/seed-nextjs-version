@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import styled from '@emotion/styled'
 
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
@@ -17,10 +18,49 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
 import SeedLogoBlack from '../../assets/logo/seed_logo_black.svg'
+import { textTransform } from '@mui/system'
 
 const pages = ['Нүүр', 'Төслүүд', 'Блог', 'Бидний тухай', 'Холбогдох']
 const pagesUrls = ['/', 'projects', 'blogs', 'about-us', 'contact-us']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
+
+const MenuButton = styled(Button)({
+	textAlign: 'center',
+	boxShadow: 'none',
+	textTransform: 'uppercase',
+	fontSize: 14,
+	padding: '6px 12px',
+	margin: '0 2px',
+	border: 'none',
+	lineHeight: 1.5,
+	backgroundColor: 'transparent',
+	fontFamily: [
+		'-apple-system',
+		'BlinkMacSystemFont',
+		'"Segoe UI"',
+		'Roboto',
+		'"Helvetica Neue"',
+		'Arial',
+		'sans-serif',
+		'"Apple Color Emoji"',
+		'"Segoe UI Emoji"',
+		'"Segoe UI Symbol"'
+	].join(','),
+	'&:hover': {
+		backgroundColor: '#127F06',
+		border: '0 0 0 10px solid #000',
+		color: '#fff',
+		boxShadow: 'none'
+	},
+	'&:active': {
+		boxShadow: 'none',
+		backgroundColor: '#000',
+		borderColor: '#005cbf'
+	},
+	'&:focus': {
+		boxShadow: '0 0 0 0.1rem rgba(0,123,255,.5)'
+	}
+})
 
 export default function SeedMenu() {
 	const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -45,7 +85,14 @@ export default function SeedMenu() {
 		<AppBar
 			position="static"
 			color="default"
-			sx={{ display: { xs: 'none', md: 'block' } }}
+			sx={{
+				display: {
+					xs: 'none',
+					md: 'block',
+					background: '#fff',
+					boxShadow: 'none'
+				}
+			}}
 		>
 			<Container>
 				<Grid
@@ -71,18 +118,15 @@ export default function SeedMenu() {
 					<Grid item>
 						<Box>
 							{pages.map((page, index) => (
-								<Link href={pagesUrls[index]}>
-									<a>
-										<Button
-											key={page}
-											onClick={handleCloseNavMenu}
-											sx={{ my: 2, display: 'inline-block' }}
-											color="primary"
-										>
-											{page}
-										</Button>
-									</a>
-								</Link>
+								<MenuButton
+									key={page}
+									href={pagesUrls[index]}
+									onClick={handleCloseNavMenu}
+									sx={{ my: 2, display: 'inline-block' }}
+									color="primary"
+								>
+									{page}
+								</MenuButton>
 							))}
 						</Box>
 					</Grid>
@@ -90,10 +134,12 @@ export default function SeedMenu() {
 					<Grid item xs={3} sx={{ textAlign: 'right' }}>
 						<Button
 							sx={{ dislay: 'block' }}
+							href="/login"
 							color="primary"
-							variant="contained"
+							variant="outlined"
+							disabled
 						>
-							Төсөл дэмжих
+							Нэвтрэх
 						</Button>
 					</Grid>
 				</Grid>
