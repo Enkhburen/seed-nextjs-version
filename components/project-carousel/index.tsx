@@ -50,7 +50,7 @@ export default function SeedProjectCarousel() {
 	// Backend data fetch
 
 	return (
-		<Box sx={{ backgroundColor: '#001d23', py: 15, px: 5, marginTop: '-7px' }}>
+		<Box sx={{ backgroundColor: '#001d23', py: 7, px: 5, marginTop: '-7px' }}>
 			<Slider {...sliderSettings}>
 				<SeedProjectCard
 					image={ProjectGrid1}
