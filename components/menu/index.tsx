@@ -11,6 +11,7 @@ import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Grid from '@mui/material/Grid'
 import Avatar from '@mui/material/Avatar'
+import Link from 'next/link'
 import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
@@ -55,21 +56,33 @@ export default function SeedMenu() {
 				>
 					<Grid item xs={3}>
 						<Typography variant="h6" noWrap component="div">
-							<Image width="160" src={SeedLogoBlack} alt="Seed Logo Black" />
+							<Link href={pagesUrls[0]}>
+								<a>
+									<Image
+										width="160"
+										src={SeedLogoBlack}
+										alt="Seed Logo Black"
+									/>
+								</a>
+							</Link>
 						</Typography>
 					</Grid>
 
 					<Grid item>
 						<Box>
-							{pages.map((page) => (
-								<Button
-									key={page}
-									onClick={handleCloseNavMenu}
-									sx={{ my: 2, display: 'inline-block' }}
-									color="primary"
-								>
-									{page}
-								</Button>
+							{pages.map((page, index) => (
+								<Link href={pagesUrls[index]}>
+									<a>
+										<Button
+											key={page}
+											onClick={handleCloseNavMenu}
+											sx={{ my: 2, display: 'inline-block' }}
+											color="primary"
+										>
+											{page}
+										</Button>
+									</a>
+								</Link>
 							))}
 						</Box>
 					</Grid>
