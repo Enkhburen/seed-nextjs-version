@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
 						textAlign: 'center',
 						width: '31%',
 						display: 'inline-block',
-						height: '477px'
+						minHeight: '520px'
 					}}
 				>
 					<CardContent>
@@ -41,7 +41,10 @@ export default function WhyChooseUs() {
 						<Typography variant="h5" sx={{ my: 2, fontWeight: 'bold' }}>
 							Олон нийтийн хүч
 						</Typography>
-						<Typography variant="caption" sx={{ mb: 4 }}>
+						<Typography
+							variant="caption"
+							sx={{ mb: 4, display: 'block', textAlign: 'justify' }}
+						>
 							Олны хүч оломгүй далай гэж үг байдаг. Олон нийтээс санхүүжилт
 							татах нь хөрөнгө ихтэй цөөн тооны хөрөнгө оруулагчдаас санхүүжилт
 							авсанаас илүү их хөрөнгийг татан төвлөрүүлж чаддаг бөгөөд seed.mn
@@ -62,7 +65,7 @@ export default function WhyChooseUs() {
 						width: '31%',
 						display: 'inline-block',
 						mx: 4,
-						height: '477px'
+						minHeight: '520px'
 					}}
 				>
 					<CardContent>
@@ -70,7 +73,10 @@ export default function WhyChooseUs() {
 						<Typography variant="h5" sx={{ my: 2, fontWeight: 'bold' }}>
 							Итгэлцэл
 						</Typography>
-						<Typography variant="caption" sx={{ mb: 4 }}>
+						<Typography
+							variant="caption"
+							sx={{ mb: 4, display: 'block', textAlign: 'justify' }}
+						>
 							Төсөл дэмжигчидийн аюулгүй байдал болон дэмжсэн төслөөсөө хүртэх
 							үр шим нь бидний хувьд маш чухал тул бид төслийг дэмжихэд
 							шаардлагатай мэдээллүүдээ бүрэн авдаг байх боломжийг бүрдүүлэн,
@@ -88,7 +94,7 @@ export default function WhyChooseUs() {
 						textAlign: 'center',
 						width: '31%',
 						display: 'inline-block',
-						height: '477px'
+						minHeight: '520px'
 					}}
 				>
 					<CardContent>
@@ -96,7 +102,10 @@ export default function WhyChooseUs() {
 						<Typography variant="h5" sx={{ my: 2, fontWeight: 'bold' }}>
 							Анхдагч & Хурд
 						</Typography>
-						<Typography variant="caption" sx={{ mb: 4 }}>
+						<Typography
+							variant="caption"
+							sx={{ mb: 4, display: 'block', textAlign: 'justify' }}
+						>
 							Төсөл хэрэгжүүлэгчид санхүүжилтээ аль болох хурдан хүлээн авч
 							төслөө хэрэгжүүлэх нөхцлийг бүрдүүлж өгнө.
 						</Typography>

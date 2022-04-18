@@ -95,7 +95,7 @@ export default function AboutUsAboutUs() {
 					</Grid>
 				</Grid>
 				<Grid item xs={7} sx={{ pl: 5 }}>
-					<Image src={AboutGalleryImage2} />
+					<Image src={AboutGalleryImage2} className="rounded-corner" />
 					{/* <Image
 						src={AboutGalleryImage1}
 						className="rounded-image about-us-image-left"
