@@ -107,21 +107,30 @@ export default function SeedFooter() {
 							height="30px"
 						/>
 						<br />
-						<Typography variant="caption" color="white">
-							© 2022 Seed.mn. Бүх эрх хуулиар хамгаалагдсан
+						<Typography variant="caption" color="white" fontSize={12}>
+							© 2022{' '}
+							<Link href="#">
+								<a style={{ color: '#127F06' }}>Seed.mn.</a>
+							</Link>{' '}
+							Бүх эрх хуулиар хамгаалагдсан
 						</Typography>
 					</Grid>
 					<Grid item xs={3} sx={{ textAlign: 'center' }}>
 						<Link href="/terms-and-conditions">
 							<a>
-								<Typography variant="body1" color="white" sx={{ mb: 2 }}>
+								<Typography
+									variant="caption"
+									display="block"
+									color="white"
+									sx={{ mb: 2 }}
+								>
 									Үйлчилгээний нөхцөл
 								</Typography>
 							</a>
 						</Link>
 						<Link href="/terms-and-conditions">
 							<a>
-								<Typography variant="body1" color="white">
+								<Typography variant="caption" display="block" color="white">
 									Бидэнтэй холбогдох
 								</Typography>
 							</a>

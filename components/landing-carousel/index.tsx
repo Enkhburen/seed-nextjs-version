@@ -6,12 +6,12 @@ import Slider2 from '../../assets/slider/slider2.jpg'
 import Slider3 from '../../assets/slider/slider3.jpg'
 
 var sliderSettings = {
-	dots: false,
+	arrow: true,
+	dots: true,
 	infinite: true,
 	speed: 500,
 	slidesToShow: 1,
-	slidesToScroll: 1,
-	accessibility: true
+	slidesToScroll: 1
 }
 
 export default function SeedLandingCarousel() {

@@ -31,6 +31,7 @@ export default function SeedProjectCard(props: IProps) {
 			{/* Make it dynamic when backend completes */}
 			<Card sx={{ height: '500px', mx: 2 }}>
 				<CardMedia
+					src={image?.src}
 					sx={{
 						overflow: 'hidden',
 						height: '250px',
@@ -60,7 +61,9 @@ export default function SeedProjectCard(props: IProps) {
 						<a>
 							<Grid container alignItems="center">
 								<Grid item sx={{ mr: 2 }}>
-									<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+									<Avatar alt="Remy Sharp" src="">
+										A
+									</Avatar>
 								</Grid>
 								<Grid item>
 									<b>{author ? author : ''}</b>
