@@ -7,7 +7,7 @@ import Slider3 from '../../assets/slider/slider3.jpg'
 
 var sliderSettings = {
 	arrow: true,
-	dots: true,
+	dots: false,
 	infinite: true,
 	speed: 500,
 	slidesToShow: 1,
